@@ -1,0 +1,157 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital@1&family=Noto+Serif:ital@0;1&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,600;1,400&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+section {
+    position: relative;
+    background: #f2f2f2;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background 0.5s;
+    font-family: 'Noto serif', sans-serif ;
+}
+section.dark {
+  background:   #24292d;
+}
+section .card {
+    position: relative;
+    width: 300px;
+    height: 380px;
+    background: #fff;
+    box-shadow: 0 0 8px grey;
+    border-radius: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+section.dark .card {
+    background: rgb(5, 54, 83);
+    box-shadow: 0 0 8px white;
+}
+section .card .content, section .card .cont-1 {
+   display: flex;
+   justify-content: center;
+   align-items: center; 
+   flex-direction: column;
+}
+section .card .cont-1 .avatar {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    overflow: hidden;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+section .card .cont-1 .avatar img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background-color: white;
+}
+section .card .cont-1 h3 {
+    font-weight: 500;
+    font-size: 1.4em;
+    line-height: 1.2em;
+    text-align: center;
+    color: #2fa1ff;
+}
+section.dark .card .cont-1 h3 {
+    text-shadow: 0 0 1.5px white;
+}
+section .card .cont-1 p {
+    font-weight: 400;
+    color: #777;
+    font-size: 1rem;
+}
+section.dark .card .cont-1 p {
+    color: white;
+}
+section .card .cont-2 {
+    display: flex;
+    margin-top: 15px;
+}
+section .card .cont-2 li {
+    list-style: none;
+}
+section .card .cont-2 li a {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    background: #d5e0ea;
+    color: #2fa1ff;
+    margin: 0 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    border-radius: 50%;
+    font-size: 23px;
+    transition: 0.5s;
+}
+section.dark .card .cont-2 li a  {
+    background: #404852;
+    box-shadow: 0 0 8px white;
+}
+section .card .cont-2 li a:hover {
+    color: white;
+    font-size: 28px;
+}
+section .card .cont-2 li a .fab {
+    position: relative;
+}
+section .card .cont-2 li a::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #2fa1ff;
+    box-shadow: 0 0 2px #44abff, 0 0 8px #6cb9f9, 0 0 18px #9ccdf5;
+    border-radius: 50%;
+    transform: scale(0);
+    transition: 0.5s;
+}
+section .card .cont-2 li a:hover::before {
+    transform: scale(1);
+}
+.change-theme {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: #d5d5e3;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transform: scale(1);
+    transition: 0.5s;
+}
+.change-theme:hover {
+    transform: scale(1.2);
+    transition: 0.5s;
+}
+section.dark .change-theme {
+    background: #404852;
+    box-shadow: 0 0 8px grey;
+}
+.change-theme:before {
+    content: '🌙';
+    color: #2fa1ff;
+    font-size: 15px;
+    font-weight: bolder;
+}
+section.dark .change-theme:before {
+    content: '🌞';
+    color: #fff;
+    font-size: 18px;
+}
